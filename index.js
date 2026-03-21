@@ -31,7 +31,23 @@ function getWeather(){
     }
     document.getElementById("weather").innerHTML = `
     <h2>${data.name}</h2>
-    `
+    <div class="item">
+    <i class="fas fa-temperature-high"></i>
+    <span>${data.main.temp}°C</span>
+    </div>
+
+    <div class="item">
+    <i class="fas fa-wind"></i>
+    <span>${data.wind.speed}m/s</span>
+    </div>
+
+    <div class="item">
+    <i class="fas fa-droplet"></i>
+    <span>${data.main.humidity}%</span>
+    </div>
+
+    <p>${data.weather[0].description}</p>
+    `;
     });
 };
 const cities = {
