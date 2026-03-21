@@ -26,3 +26,4 @@ function updateCities(){
         selectcity.appendChild(option)
     });
 };
+
