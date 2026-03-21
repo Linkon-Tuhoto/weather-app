@@ -6,7 +6,14 @@
     <title>Weather-app</title>
 </head>
 <body>
-    <input type="text" id="city" placeholder="Enter City">
+    <select name="" id="country" onchange="updatecities()">
+        <option value="">--SELECT COUNTRY--</option>
+        <option value="kenya">KENYA</option>
+        <option value="America">AMERICA</option>
+    </select>
+    <select name="" id="city">
+        <option value="">--SELECT CITY--</option>
+    </select>
     <button onclick="getWeather()">Get Weather</button>
 
     <div id="weather"></div>
