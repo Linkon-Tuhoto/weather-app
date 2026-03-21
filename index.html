@@ -8,10 +8,23 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div id="weather-app">
+        <h1>Weather App</h1>
     <select name="" id="country" onchange="updateCities()">
         <option value="">--SELECT COUNTRY--</option>
+        <option value="australia">AUSTRALIA</option>
+        <option value="brazil">BRAZIL</option>
+        <option value="canada">CANADA</option>
+        <option value="china">CHINA</option>
+        <option value="france">FRANCE</option>
+        <option value="germany">GERMANY</option>
+        <option value="india">INDIA</option>
+        <option value="japan">JAPAN</option>
         <option value="kenya">KENYA</option>
-        <option value="America">AMERICA</option>
+        <option value="nigeria">NIGERIA</option>
+        <option value="southafrica">SOUTH AFRICA</option>
+        <option value="uk">UNITED KINGDOM</option>
+        <option value="usa">UNITED STATES OF AMERICA</option>
     </select>
     <select name="" id="city">
         <option value="">--SELECT CITY--</option>
@@ -19,7 +32,14 @@
     <button onclick="getWeather()">Get Weather</button>
 
     <div id="weather"></div>
-    <i id="icon" class="fas fa-sun"></i>
+    <i id="icon" class=""></i>
+
+    <div id="instructions1">
+        <span>🌐 1. Choose your country</span>
+        <span>🏢 2. Select your city</span>
+        <span>👉 3. Click "Get Weather"</span>
+    </div>
+    </div>
     
 
     <script src="index.js"></script>

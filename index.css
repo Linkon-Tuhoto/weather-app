@@ -1,5 +1,91 @@
-#icon{
-    font-size: 70px;
-    color: orange;
-    margin-top: 20px;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #87CEFA, #E0F7FA); /* soft sky gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+#weather-app {
+    background: rgba(255, 255, 255, 0.15); /* semi-transparent card */
+    backdrop-filter: blur(10px); /* frosted glass effect */
+    border-radius: 20px;
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+select, button {
+    width: 80%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+select {
+    background-color: #4f5257;
+    color: #ffffff;
+    border-radius: 10px;
+}
+button {
+    background-color: #1976D2;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #1565C0;
+}
+#weather h2 {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #1e293b;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.item i {
+    font-size: 28px;
+}
+#icon {
+    font-size: 60px;
+    margin: 15px 0;
+}
+.yes{
+    margin-top: 10px;
+    background: #1e293b;
+    font-size: 16px;
+    color: #ffffff;
+    font-style: italic;
+    padding: 10px;
+    border-radius: 12px;
+}
+#instructions1 {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #4f5257;
+    text-align: center;
+}
+#instructions1 span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+

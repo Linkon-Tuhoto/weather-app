@@ -1,4 +1,4 @@
-const apiKey =""
+const apiKey ="57b48da0c5640c0f3912458724a70a9b"
 function getWeather(){
     const city = document.getElementById("city").value;
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
@@ -10,7 +10,7 @@ function getWeather(){
     `;
     const icon = document.getElementById("icon");
     const condition = data.weather[0].main.toLowerCase();
-    icon.className = "fas";
+    icon.className = "fa-sun";
     if(condition === "clear"){
     icon.classList.add("fa-sun");
     }
@@ -31,28 +31,45 @@ function getWeather(){
     }
     document.getElementById("weather").innerHTML = `
     <h2>${data.name}</h2>
+    <div class="allitems">
+
     <div class="item">
+    <h3>Temp</h3>
     <i class="fas fa-temperature-high"></i>
     <span>${data.main.temp}°C</span>
     </div>
 
     <div class="item">
+    <h3>Wind Speed</h3>
     <i class="fas fa-wind"></i>
     <span>${data.wind.speed}m/s</span>
     </div>
 
     <div class="item">
+    <h3>Humidity</h3>
     <i class="fas fa-droplet"></i>
     <span>${data.main.humidity}%</span>
     </div>
+    </div>
 
-    <p>${data.weather[0].description}</p>
+    <p class="yes">${data.weather[0].description}</p>
     `;
     });
 };
 const cities = {
-    kenya : ["NAIROBI", "KISUMU", "ELDORET", "NAKURU", "MOMBASA"],
-    America : ["WASHINGTON DC", "NEWYORK", "CHICAGO"]
+    australia: ["Sydney", "Melbourne", "Brisbane"],
+    brazil: ["Sao Paulo", "Rio de Janeiro", "Brasilia"],
+    canada: ["Toronto", "Vancouver", "Montreal"],
+    china: ["Beijing", "Shanghai", "Shenzhen"],
+    france: ["Paris", "Lyon", "Marseille"],
+    germany: ["Berlin", "Munich", "Hamburg"],
+    india: ["Mumbai", "Delhi", "Bangalore"],
+    japan: ["Tokyo", "Osaka", "Kyoto"],
+    kenya: ["Nairobi", "Mombasa", "Kisumu", "Eldoret", "Nakuru", "Meru"],
+    nigeria: ["Lagos", "Abuja", "Kano"],
+    southafrica: ["Johannesburg", "Cape Town", "Durban"],
+    uk: ["London", "Manchester", "Birmingham"],
+    usa: ["New York", "Los Angeles", "Chicago"]
 }
 function updateCities(){
     const country = document.getElementById("country").value;
