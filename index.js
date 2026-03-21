@@ -1,4 +1,4 @@
-const apiKey ="4ab6eca84276593609318b4851f4eca2"
+const apiKey =""
 function getWeather(){
     const city = document.getElementById("city").value;
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
@@ -10,4 +10,19 @@ function getWeather(){
     `;
     });
 };
-const cities = {}
+const cities = {
+    kenya : ["NAIROBI", "KISUMU", "ELDORET", "NAKURU", "MOMBASA"],
+    America : ["WASHINGTON DC", "NEWYORK", "CHICAGO"]
+}
+function updateCities(){
+    const country = document.getElementById("country").value;
+    const selectcity = document.getElementById("city");
+    selectcity.innerHTML = '<option value="">--SELECT CITY--</option>';
+
+    cities[country].forEach( city => {
+        const option = document.createElement("option");
+        option.value = city;
+        option.textContent = city;
+        selectcity.appendChild(option)
+    });
+};
