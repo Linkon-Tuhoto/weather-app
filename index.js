@@ -1,4 +1,4 @@
-const apiKey =""
+const apiKey ="f96dd9ec41d6c4209e56030fce537273"
 function getWeather(){
     const city = document.getElementById("city").value;
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
@@ -8,6 +8,30 @@ function getWeather(){
     <p>Temperature: ${data.main.temp}</p>
     <p>Condition: ${data.weather[0].description}</p>
     `;
+    const icon = document.getElementById("icon");
+    const condition = data.weather[0].main.toLowerCase();
+    icon.className = "fas";
+    if(condition === "clear"){
+    icon.classList.add("fa-sun");
+    }
+    else if(condition === "rain"){
+    icon.classList.add("fa-cloud-rain");
+    }
+    else if(condition === "clouds"){
+    icon.classList.add("fa-cloud");
+    }
+    else if(condition === "snow"){
+    icon.classList.add("fa-snowflake");
+    }
+    else if(condition === "thunderstorm"){
+    icon.classList.add("fa-bolt");
+    }
+    else{
+    icon.classList.add("fa-smog");
+    }
+    document.getElementById("weather").innerHTML = `
+    <h2>${data.name}</h2>
+    `
     });
 };
 const cities = {
