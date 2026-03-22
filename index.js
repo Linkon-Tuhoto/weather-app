@@ -1,4 +1,4 @@
-const apiKey ="57b48da0c5640c0f3912458724a70a9b"
+const apiKey =""
 function getWeather(){
     const city = document.getElementById("city").value;
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
@@ -57,6 +57,7 @@ function getWeather(){
     });
 };
 const cities = {
+    kenya: ["Nairobi", "Mombasa", "Kisumu", "Eldoret", "Nakuru", "Meru"],
     australia: ["Sydney", "Melbourne", "Brisbane"],
     brazil: ["Sao Paulo", "Rio de Janeiro", "Brasilia"],
     canada: ["Toronto", "Vancouver", "Montreal"],
@@ -65,11 +66,63 @@ const cities = {
     germany: ["Berlin", "Munich", "Hamburg"],
     india: ["Mumbai", "Delhi", "Bangalore"],
     japan: ["Tokyo", "Osaka", "Kyoto"],
-    kenya: ["Nairobi", "Mombasa", "Kisumu", "Eldoret", "Nakuru", "Meru"],
     nigeria: ["Lagos", "Abuja", "Kano"],
     southafrica: ["Johannesburg", "Cape Town", "Durban"],
     uk: ["London", "Manchester", "Birmingham"],
-    usa: ["New York", "Los Angeles", "Chicago"]
+    usa: ["New York", "Los Angeles", "Chicago"],
+    algeria: ["Algiers", "Oran", "Constantine"],
+    angola: ["Luanda", "Huambo", "Lobito"],
+    benin: ["Cotonou", "Porto-Novo", "Parakou"],
+    botswana: ["Gaborone", "Francistown", "Maun"],
+    burkinafaso: ["Ouagadougou", "Bobo-Dioulasso", "Koudougou"],
+    burundi: ["Gitega", "Bujumbura", "Ngozi"],
+    cameroon: ["Yaounde", "Douala", "Garoua"],
+    capeverde: ["Praia", "Mindelo", "Santa Maria"],
+    centralafricanrepublic: ["Bangui", "Bimbo", "Berberati"],
+    chad: ["N'Djamena", "Moundou", "Sarh"],
+    comoros: ["Moroni", "Mutsamudu", "Fomboni"],
+    congo: ["Brazzaville", "Pointe-Noire", "Dolisie"],
+    drcongo: ["Kinshasa", "Lubumbashi", "Goma"],
+    djibouti: ["Djibouti", "Ali Sabieh", "Tadjoura"],
+    egypt: ["Cairo", "Alexandria", "Giza"],
+    equatorialguinea: ["Malabo", "Bata", "Ebebiyin"],
+    eritrea: ["Asmara", "Keren", "Massawa"],
+    ethiopia: ["Addis Ababa", "Dire Dawa", "Mekelle"],
+    gabon: ["Libreville", "Port-Gentil", "Franceville"],
+    gambia: ["Banjul", "Serekunda", "Brikama"],
+    ghana: ["Accra", "Kumasi", "Tamale"],
+    guinea: ["Conakry", "Kankan", "Labe"],
+    guineabissau: ["Bissau", "Bafata", "Gabu"],
+    ivorycoast: ["Abidjan", "Yamoussoukro", "Bouake"],
+    lesotho: ["Maseru", "Teyateyaneng", "Mafeteng"],
+    liberia: ["Monrovia", "Gbarnga", "Kakata"],
+    libya: ["Tripoli", "Benghazi", "Misrata"],
+    madagascar: ["Antananarivo", "Toamasina", "Antsirabe"],
+    malawi: ["Lilongwe", "Blantyre", "Mzuzu"],
+    mali: ["Bamako", "Sikasso", "Mopti"],
+    mauritania: ["Nouakchott", "Nouadhibou", "Rosso"],
+    mauritius: ["Port Louis", "Curepipe", "Quatre Bornes"],
+    morocco: ["Casablanca", "Rabat", "Marrakesh"],
+    mozambique: ["Maputo", "Beira", "Nampula"],
+    namibia: ["Windhoek", "Walvis Bay", "Swakopmund"],
+    niger: ["Niamey", "Zinder", "Maradi"],
+    nigeria: ["Lagos", "Abuja", "Kano"],
+    rwanda: ["Kigali", "Butare", "Gisenyi"],
+    saotome: ["Sao Tome", "Neves", "Santana"],
+    senegal: ["Dakar", "Touba", "Saint-Louis"],
+    seychelles: ["Victoria", "Beau Vallon", "Anse Boileau"],
+    sierraleone: ["Freetown", "Bo", "Kenema"],
+    somalia: ["Mogadishu", "Hargeisa", "Kismayo"],
+    southafrica: ["Johannesburg", "Cape Town", "Durban"],
+    southsudan: ["Juba", "Wau", "Malakal"],
+    sudan: ["Khartoum", "Omdurman", "Port Sudan"],
+    swaziland: ["Mbabane", "Manzini", "Big Bend"],
+    tanzania: ["Dar es Salaam", "Dodoma", "Arusha"],
+    togo: ["Lome", "Sokode", "Kara"],
+    tunisia: ["Tunis", "Sfax", "Sousse"],
+    uganda: ["Kampala", "Gulu", "Mbarara"],
+    zambia: ["Lusaka", "Kitwe", "Ndola"],
+    zimbabwe: ["Harare", "Bulawayo", "Mutare"]
 }
 function updateCities(){
     const country = document.getElementById("country").value;

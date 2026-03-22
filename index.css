@@ -89,3 +89,65 @@ button:hover {
     margin-bottom: 4px;
 }
 
+/*#icon{
+    font-size: 70px;
+    margin-top: 20px;
+}
+#weather{
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.item{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 100px;
+    width: 90%;
+    gap: 2px;
+    background: #1e293b;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.yes{
+    max-width: 200px;
+    width: 90%;
+    gap: 5px;
+    background: #1e293b;
+    color: white;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.allitems{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.item i {
+  color: #38bdf8;
+  font-size: 20px;
+}
+.fas {
+  font-size: 60px;
+  margin: 15px 0;
+}
+
+.fa-sun {
+  color: orange;
+}
+
+.fa-cloud-rain {
+  color: blue;
+}
+
+.fa-cloud {
+  color: gray;
+}
+
+.fa-snowflake {
+  color: lightblue;
+}
+
+.fa-bolt {
+  color: yellow;
+}*/
